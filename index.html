@@ -13,10 +13,14 @@
 </head>
 
 <body>
-  <div class="container">
+  <div id="top" class="container">
     <div class="site-header">
+      <ul class="skip-links">
+        <li><a href="#nav">Skip to main nav</a></li>
+        <li><a href="#main">Skip to main content</a></li>
+      </ul>
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <div id="nav" class="main-nav ">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
@@ -24,21 +28,21 @@
           <li><a href="#">Studio</a></li>
         </ul>
       </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      <img role="banner" src="https://placekitten.com/1200/900" alt="Cat picture" class="banner">
     </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
+    <div id="main" class="main-content">
+      <h2>Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
+        <h2>Meet the owner</h2>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email" >Email: johnjoe@jambox.ca</li>
           <li>Phone: 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
+        <h2>Address</h2>
         <p>
           Jambox Studios
           123 Guitar Road,
@@ -47,12 +51,15 @@
         </p>
       </div>
       <div class="contact-section">
-        <h1>Contact Us</h1>
+        <h2>Contact Us</h2>
         <form action="thanks.html">
           <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
+          <label for="yourname">Name</label>
+          <input type="text" id="yourname" placeholder="Full Name">
+          <label for="youremail">Email </label>
+          <input type="text" id="youremail" placeholder="Email">
+          <label for="yoursubject">Subject </label>
+          <input type="text" id="yoursubject" placeholder="Subject">
           <b>Your Message</b>
           <textarea></textarea>
           <button type="submit">Send</button>
@@ -61,6 +68,7 @@
     </div>
     <div class="site-footer">
       &copy; 2021 Jam Box Studios
+      <a href="#top" aria-label="Submit the Form">Back to Top</a>
     </div>
   </div>
 </body>
